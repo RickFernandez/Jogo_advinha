@@ -1,0 +1,48 @@
+<script>
+	
+	function pulaLinha() {
+		document.write("<br><br>");
+	}
+
+	function mostra(frase) {
+		document.write(frase);
+		pulaLinha();
+	}
+
+	function sorteia(n) {
+		return Math.round(Math.random() * n);
+	}
+
+
+	var numeroPensado = sorteia(10);
+
+	var chute = parseInt(prompt("Já pensei. Digite seu chute:"));
+
+
+	// Para não precisar criar outra função "if", pode-se utilizar o "else {}"
+
+
+	if (chute == numeroPensado) {
+
+		mostra("Parabéns, você acertou! Eu pensei no " + numeroPensado);
+	} 
+
+	else { 
+
+
+		mostra("você errou, o número pensado foi: " + numeroPensado)
+
+		if (chute < numeroPensado) {
+
+		mostra("Seu chute foi menor do que o número pensado.");
+
+		}  
+
+		else {
+
+		mostra("Seu chute foi maior do que o número pensado.");
+
+		}
+	}
+
+</script>
